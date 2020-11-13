@@ -16,10 +16,10 @@ const stackMachineCalculator = (instructions) => {
     else if(el == '-'){
       stack.push(stack.pop()-stack.pop());
     } else {
-      stack.push(el);
+      stack.push(Number(el));
     }
   }
-  return Number(stack[stack.length-1]);
+  return stack[stack.length-1];
 }
 
 module.exports = stackMachineCalculator
